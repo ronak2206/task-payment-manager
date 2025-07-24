@@ -4,23 +4,70 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Task & Payment Manager</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f8fafc;
+      margin: 0;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #1e293b;
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .section h2 {
+      font-size: 1.25rem;
+      color: #0f172a;
+      border-left: 5px solid #3b82f6;
+      padding-left: 12px;
+      margin-bottom: 10px;
+    }
+
+    .task {
+      background: #ffffff;
+      padding: 16px;
+      margin: 8px 0;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      font-size: 1rem;
+      border-left: 4px solid #10b981;
+    }
+
+    .task.past-due {
+      border-left-color: #ef4444;
+    }
+
+    .task.upcoming {
+      border-left-color: #f59e0b;
+    }
+  </style>
 </head>
 <body>
+
   <h1>Task & Payment Manager</h1>
-  <div id="task-sections">
-    <section>
-      <h2>Do Today</h2>
-      <ul><li>Follow up with Party X</li></ul>
-    </section>
-    <section>
-      <h2>Past Due</h2>
-      <ul><li>Collect payment from Party Y (5 days late)</li></ul>
-    </section>
-    <section>
-      <h2>Upcoming</h2>
-      <ul><li>Send bill to Party Z (Due in 2 days)</li></ul>
-    </section>
+
+  <div class="section">
+    <h2>Do Today</h2>
+    <div class="task">Follow up with Party X</div>
   </div>
+
+  <div class="section">
+    <h2>Past Due</h2>
+    <div class="task past-due">Collect payment from Party Y (5 days late)</div>
+  </div>
+
+  <div class="section">
+    <h2>Upcoming</h2>
+    <div class="task upcoming">Send bill to Party Z (Due in 2 days)</div>
+  </div>
+
 </body>
 </html>
